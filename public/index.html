@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <h1 class="headings"> Doggos page </h1>
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick='buttonActive()'> Show Doggos </button>
+        </div>
+    </div>
+
+    <script id="doggos-template" type="text/x-handlebars-template">
+        {{#each dogs}}
+        <div class= "dogos">
+            <h2> {{ name }} </h2><br>
+            <p> is {{ age }} years old </p><br>
+            <img src= {{ image }} width="400px" height="280px"></p> <br>
+        </div>
+        {{/each}}
+    </script>
+
+    <div class="myDoggos">
+    </div>
+
+    <script src=".\jquery\dist\jquery.js"></script>
+    <script src=".\handlebars\dist\handlebars.js"></script>
+    <script src="dogs.js"></script>
+</body>
+
+</html>
